@@ -17,7 +17,10 @@ export const Login = () => {
       loggedIn("/welcome");
     }
   };
-
+  useEffect(() => {
+    console.log("run");
+    submitFunction();
+  }, []);
   const Handler = async (ev) => {
     ev.preventDefault();
     setEmail("");
@@ -43,9 +46,6 @@ export const Login = () => {
       setError(error);
       console.log(error);
     }
-    useEffect(() => {
-      submitFunction();
-    });
   };
   return (
     <>

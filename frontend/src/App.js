@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./components/Home/Home";
 import Welcome from "./components/Home/Welcome";
 import { Login } from "./components/Login/Login";
+import { Bus } from "./components/Pages/Bus";
 import Signup from "./components/Sign-up/Signup";
 
 const App = () => {
@@ -12,6 +13,7 @@ const App = () => {
       <Route path="/login" element={<Login />}></Route>
       <Route path="/sign-up" element={<Signup />}></Route>
       <Route path="/welcome" element={<Welcome />}></Route>
+      <Route path="/bus" element={<Bus />}></Route>
     </Routes>
   );
 };

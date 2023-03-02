@@ -1,0 +1,79 @@
+.services-div {
+  height: 85vh;
+  width: 100vw;
+  background-color: rgb(49, 48, 48);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1vw;
+  font-size: 2vh;
+}
+.services {
+  height: 90%;
+  width: 90%;
+  /* background-color: black; */
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.service {
+  height: 40%;
+  width: 28%;
+  background-color: rgb(224, 224, 224);
+  overflow-wrap: normal;
+  gap: 1%;
+  margin: 1.5%;
+  border-radius: 2%;
+}
+.service:hover {
+  scale: 1.05;
+  transition: 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+#Bus {
+  height: 100%;
+  width: 100%;
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("/Users/abhishekkhande/Documents/Personal Work/React Practice/MernStack/frontend/public/Images/bus-stop.png");
+}
+#Flights {
+  height: 100%;
+  width: 100%;
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("/Users/abhishekkhande/Documents/Personal Work/React Practice/MernStack/frontend/public/Images/departures.png");
+}
+#Movies {
+  height: 100%;
+  width: 100%;
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("/Users/abhishekkhande/Documents/Personal Work/React Practice/MernStack/frontend/public/Images/movie.png");
+}
+#Hotels {
+  height: 100%;
+  width: 100%;
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("/Users/abhishekkhande/Documents/Personal Work/React Practice/MernStack/frontend/public/Images/resort.png");
+}
+#Train {
+  height: 100%;
+  width: 100%;
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("/Users/abhishekkhande/Documents/Personal Work/React Practice/MernStack/frontend/public/Images/high-speed-train.png");
+}
+#Concerts {
+  height: 100%;
+  width: 100%;
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("/Users/abhishekkhande/Documents/Personal Work/React Practice/MernStack/frontend/public/Images/festival.png");
+}

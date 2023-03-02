@@ -1,10 +1,16 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./navbar.css";
 
 export const ViewNoLog = () => {
+  const logOut = useNavigate();
   const userName = localStorage.getItem("userData");
   const jsonUserData = JSON.parse(userName);
+  const logOutHandler = () => {
+    localStorage.removeItem("userData");
+    logOut("/login");
+  };
+
   return (
     <div className="navbar">
       <div className="logo">
@@ -14,12 +20,13 @@ export const ViewNoLog = () => {
         <Link to="/offers">OFFERS</Link>
       </div>
       {/* <div className="search-bar"></div> */}
-      <div className="log-in">
-        <Link to="/login">
-          Hello
-          <br />
-          {jsonUserData.Name}
-        </Link>
+      <div className="log-in" style={{ top: "80%" }}>
+        Hello ,
+        <br />
+        {jsonUserData.Name}
+      </div>
+      <div className="log-out">
+        <Link onClick={logOutHandler}>Log Out</Link>
       </div>
     </div>
   );
