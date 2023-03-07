@@ -3,6 +3,7 @@ const dotenv = require("dotenv");
 const connectDB = require("./config/Database");
 const userSignup = require("./routes/signupRoute");
 const userLogin = require("./routes/loginRoute");
+const busInfo = require("./routes/busRoute");
 const app = express();
 const PORT = process.env.PORT || 4000;
 dotenv.config();
@@ -13,7 +14,7 @@ app.get("/", (req, res) => {
   res.send("api is running");
 });
 
-// app.use("/", userLogin);
+// app.use("/", busInfo);
 app.use("/", userLogin);
 app.use("/", userSignup);
 

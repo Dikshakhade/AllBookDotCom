@@ -35,7 +35,7 @@
   background-size: 50%;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url("/Users/abhishekkhande/Documents/Personal Work/React Practice/MernStack/frontend/public/Images/bus-stop.png");
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Bus-logo.svg/1024px-Bus-logo.svg.png");
 }
 #Flights {
   height: 100%;
@@ -43,7 +43,7 @@
   background-size: 50%;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url("/Users/abhishekkhande/Documents/Personal Work/React Practice/MernStack/frontend/public/Images/departures.png");
+  background-image: url("https://www.pngitem.com/pimgs/m/94-949900_flight-airplane-logo-png-transparent-png.png");
 }
 #Movies {
   height: 100%;
@@ -51,7 +51,7 @@
   background-size: 50%;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url("/Users/abhishekkhande/Documents/Personal Work/React Practice/MernStack/frontend/public/Images/movie.png");
+  background-image: url("https://i.pinimg.com/originals/85/46/82/854682f52061fc6341ff3d4de67a2017.jpg");
 }
 #Hotels {
   height: 100%;
@@ -59,7 +59,7 @@
   background-size: 50%;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url("/Users/abhishekkhande/Documents/Personal Work/React Practice/MernStack/frontend/public/Images/resort.png");
+  background-image: url("https://www.freepnglogos.com/uploads/hotel-logo-png/hotel-icon-download-28.png");
 }
 #Train {
   height: 100%;
@@ -67,7 +67,7 @@
   background-size: 50%;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url("/Users/abhishekkhande/Documents/Personal Work/React Practice/MernStack/frontend/public/Images/high-speed-train.png");
+  background-image: url("https://cdn-icons-png.flaticon.com/512/3/3843.png");
 }
 #Concerts {
   height: 100%;
@@ -75,5 +75,5 @@
   background-size: 50%;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url("/Users/abhishekkhande/Documents/Personal Work/React Practice/MernStack/frontend/public/Images/festival.png");
+  background-image: url("https://png.pngtree.com/png-clipart/20190223/ourmid/pngtree-silhouette-elements-of-characters-in-black-concert-png-image_710918.jpg");
 }
