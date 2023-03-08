@@ -7,7 +7,8 @@ import Welcome from "./components/Home/Welcome";
 import { Login } from "./components/Login/Login";
 import Bus from "./components/Pages/Bus";
 import Signup from "./components/Sign-up/Signup";
-
+import Train from "./components/Pages/Train";
+import Movies from "./components/Pages/Movies";
 const App = () => {
   return (
     <>
@@ -17,7 +18,9 @@ const App = () => {
           <Route path="/login" element={<Login />}></Route>
           <Route path="/sign-up" element={<Signup />}></Route>
           <Route path="/welcome" element={<Welcome />}></Route>
-          <Route path="/bus" element={<Bus />}></Route>
+          <Route path="/Bus" element={<Bus />}></Route>
+          <Route path="/Train" element={<Train />}></Route>
+          <Route path="/Movies" element={<Movies />}></Route>
         </Routes>
       </BrowserRouter>
       <ToastContainer />

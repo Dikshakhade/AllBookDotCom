@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Signup.css";
 import View from "../headers/View";
-import axios from "axios";
+
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";

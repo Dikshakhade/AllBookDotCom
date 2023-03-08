@@ -10,7 +10,7 @@
 }
 @font-face {
   font-family: FrontPageFont;
-  src: url("E:\myshow\BookingDotCom\frontend\public\Fonts\Electrolize\Electrolize-Regular.ttf");
+  src: url("/Users/abhishekkhande/Documents/Personal Work/React Practice/MernStack/frontend/src/Fonts/Electrolize/Electrolize-Regular.ttf");
 }
 .logo {
   font-size: 1.2vw;

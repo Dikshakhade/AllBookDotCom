@@ -1,8 +1,4 @@
-#root {
-  overflow: hidden;
-}
-.bus-div {
-  width: 100vw;
+.Train-div {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,7 +6,7 @@
   background: grey;
   font-family: FrontPageFont;
 }
-.bus-element {
+.Train-element {
   margin: 5.5%;
   height: 20vh;
   width: 90vw;
@@ -19,44 +15,44 @@
   column-gap: 1%;
   border-radius: 15px;
 }
-.bus-name {
+.Train-name {
   border-radius: 10px;
   background-color: rgb(255, 255, 255);
 }
-#bus-description {
+#Train-description {
   display: grid;
   grid-template-rows: 1fr 2fr 1fr;
 }
-#bus-title {
+#Train-title {
   text-align: center;
   color: black;
   font-weight: bold;
   font-size: 2.5vw;
 }
-#from-to {
+#from-to-train {
   color: black;
   padding: 1vw;
   display: grid;
   font-size: 2.5vw;
   grid-template-columns: 1fr 1fr;
 }
-.bus-p {
+.Train-p {
   border-radius: 10px;
   background-color: rgb(255, 255, 255);
 }
-#departure-time {
+#departure-time-train {
   color: black;
   padding: 1vw;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
-#price-seat {
+#price-seat-train {
   border-radius: 10px;
   display: grid;
   grid-template-rows: 2fr 1fr;
   row-gap: 2%;
 }
-.price {
+.price-train {
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
   text-align: center;
@@ -64,7 +60,7 @@
   color: rgb(255, 255, 255);
   padding-top: 18%;
 }
-.book-seat {
+.book-seat-train {
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   background: rgb(0, 0, 0);
