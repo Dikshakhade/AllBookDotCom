@@ -16,7 +16,7 @@
   flex-direction: column;
   /* align-items: center; */
   width: 30vw;
-  height: 40vh;
+  height: 45vh;
   border-radius: 5px;
   padding: 1%;
   color: black;
@@ -43,7 +43,7 @@
   outline: none;
 }
 .signup-email {
-  height: 25%;
+  height: 23%;
   width: 100%;
 }
 .signup-email input {
@@ -58,7 +58,7 @@
   outline: none;
 }
 .signup-password {
-  height: 33.3%;
+  height: 18%;
   width: 100%;
 }
 .signup-password input {

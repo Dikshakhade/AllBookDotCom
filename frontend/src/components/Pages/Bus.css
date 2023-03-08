@@ -21,7 +21,7 @@
 }
 .bus-name {
   border-radius: 10px;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(224, 224, 224);
 }
 #bus-description {
   display: grid;
@@ -42,7 +42,7 @@
 }
 .bus-p {
   border-radius: 10px;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(224, 224, 224);
 }
 #departure-time {
   color: black;
