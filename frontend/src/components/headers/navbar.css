@@ -10,8 +10,13 @@
 }
 /* @font-face {
   font-family: FrontPageFont;
+<<<<<<< HEAD
   src: url("E:\myshow\BookingDotCom\frontend\src\Fonts\Electrolize");
 } */
+=======
+  src: url("/Users/abhishekkhande/Documents/Personal Work/React Practice/MernStack/frontend/src/Fonts/Electrolize/Electrolize-Regular.ttf");
+}
+>>>>>>> 0b8f9f029cc671c26b2cff32f2a29ddf727cb117
 .logo {
   font-size: 1.2vw;
   height: 100%;

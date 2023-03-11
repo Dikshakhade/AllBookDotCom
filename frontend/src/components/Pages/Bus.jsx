@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useState } from "react";
 import "./Bus.css";
 import ViewNoLog from "../headers/ViewNoLog";
@@ -9,6 +10,59 @@ function Bus() {
       setBusData(res.data);
     });
   }, []);
+=======
+import React from "react";
+import "./Bus.css";
+import ViewNoLog from "../headers/ViewNoLog";
+function Bus() {
+  const BusData = [
+    {
+      busId: 1,
+      name: "bus1",
+      from: "Pune",
+      to: "Mumbai",
+      departureTime: "2.00pm",
+      totalTime: "4 hours",
+      price: "1000/-",
+    },
+    {
+      busId: 2,
+      name: "bus2",
+      from: "Pune",
+      to: "Banglore",
+      departureTime: "2.00pm",
+      totalTime: "4 hours",
+      price: "1000/-",
+    },
+    {
+      busId: 3,
+      name: "bus3",
+      from: "Pune",
+      to: "Ratnagiri",
+      departureTime: "2.00pm",
+      totalTime: "4 hours",
+      price: "1000/-",
+    },
+    {
+      busId: 3,
+      name: "bus3",
+      from: "Pune",
+      to: "Ratnagiri",
+      departureTime: "2.00pm",
+      totalTime: "4 hours",
+      price: "1000/-",
+    },
+    {
+      busId: 3,
+      name: "bus3",
+      from: "Pune",
+      to: "Ratnagiri",
+      departureTime: "2.00pm",
+      totalTime: "4 hours",
+      price: "1000/-",
+    },
+  ];
+>>>>>>> 0b8f9f029cc671c26b2cff32f2a29ddf727cb117
 
   return (
     <>
