@@ -8,11 +8,6 @@ function ViewNoLog() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { userData } = useSelector((state) => state.auth);
-  // const logoutHandler = () => {
-  //   dispatch(logout());
-  //   dispatch(reset());
-  //   navigate("/");
-  // };
   return (
     <div className="navbar">
       <div className="logo">
@@ -27,7 +22,8 @@ function ViewNoLog() {
         <br />
       </div>
       <div className="log-out">
-        <button
+        <p
+          style={{ cursor: "pointer" }}
           onClick={() => {
             dispatch(logout());
             dispatch(reset());
@@ -35,7 +31,7 @@ function ViewNoLog() {
           }}
         >
           Logout
-        </button>
+        </p>
       </div>
     </div>
   );

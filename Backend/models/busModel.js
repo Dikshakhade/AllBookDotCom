@@ -2,6 +2,10 @@ const mongoose = require("mongoose");
 
 const busSchema = mongoose.Schema(
   {
+    name: {
+      type: String,
+      required: true,
+    },
     from: {
       type: String,
       required: true,
@@ -14,7 +18,7 @@ const busSchema = mongoose.Schema(
       type: String,
       required: true,
     },
-    busType: {
+    totalTime: {
       type: String,
       required: true,
     },
@@ -27,6 +31,6 @@ const busSchema = mongoose.Schema(
     timestamps: true,
   }
 );
-const bus = mongoose.model("bus", busSchema);
+const Bus = mongoose.model("Bus", busSchema);
 
-module.exports = bus;
+module.exports = Bus;

@@ -4,14 +4,14 @@
   background-color: rgb(0, 0, 0);
   display: flexbox;
   position: relative;
-  font-family: FrontPageFont;
+  font-family: "Electrolize", sans-serif;
   font-weight: bolder;
   color: white;
 }
-@font-face {
+/* @font-face {
   font-family: FrontPageFont;
-  src: url("E:\myshow\BookingDotCom\frontend\public\Fonts\Electrolize\Electrolize-Regular.ttf");
-}
+  src: url("E:\myshow\BookingDotCom\frontend\src\Fonts\Electrolize");
+} */
 .logo {
   font-size: 1.2vw;
   height: 100%;

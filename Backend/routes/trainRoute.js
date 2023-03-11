@@ -1,10 +1,10 @@
 const express = require("express");
 const router = express.Router();
-const { busData } = require("../Controller/BusContoller");
-const BusData = [
+
+const TrainData = [
   {
-    busId: 1,
-    name: "bus1",
+    trainId: 1,
+    name: "train1",
     from: "Pune",
     to: "Mumbai",
     departureTime: "2.00pm",
@@ -12,8 +12,8 @@ const BusData = [
     price: "1000/-",
   },
   {
-    busId: 2,
-    name: "bus2",
+    trainId: 2,
+    name: "train2",
     from: "Pune",
     to: "Banglore",
     departureTime: "2.00pm",
@@ -21,8 +21,8 @@ const BusData = [
     price: "1000/-",
   },
   {
-    busId: 3,
-    name: "bus3",
+    trainId: 3,
+    name: "train3",
     from: "Pune",
     to: "Ratnagiri",
     departureTime: "2.00pm",
@@ -30,8 +30,8 @@ const BusData = [
     price: "1000/-",
   },
   {
-    busId: 4,
-    name: "bus3",
+    trainId: 4,
+    name: "train3",
     from: "Pune",
     to: "Ratnagiri",
     departureTime: "2.00pm",
@@ -39,8 +39,8 @@ const BusData = [
     price: "1000/-",
   },
   {
-    busId: 5,
-    name: "bus3",
+    trainId: 5,
+    name: "train3",
     from: "Pune",
     to: "Ratnagiri",
     departureTime: "2.00pm",
@@ -48,11 +48,8 @@ const BusData = [
     price: "1000/-",
   },
 ];
-router.route("/bus").get(busData);
-// router.route("/bus").get(async (req, res) => {
-//   res.send(BusData);
-// });
-// router.route("/createbus").post()
-// router.route(":/id").get().put().delete()
 
+router.route("/train").get((req, res) => {
+  res.send(TrainData);
+});
 module.exports = router;
