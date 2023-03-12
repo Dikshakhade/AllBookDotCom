@@ -1,14 +1,7 @@
 /* @font-face {
   font-family: What;
-<<<<<<< HEAD
   src: url("E:\myshow\BookingDotCom\frontend\src\Fonts\Electrolize");
 } */
-=======
-  src: local("Electrolize-Regular.ttf"),
-    url("/Users/abhishekkhande/Documents/Personal Work/React Practice/MernStack/frontend/src/Fonts/Electrolize/Electrolize-Regular.ttf")
-      format("truetype");
-}
->>>>>>> 0b8f9f029cc671c26b2cff32f2a29ddf727cb117
 .booking-div {
   height: 80vh;
   width: 100vw;

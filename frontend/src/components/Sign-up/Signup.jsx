@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Signup.css";
 import View from "../headers/View";
-
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
@@ -38,28 +37,6 @@ const Signup = () => {
       const userData = { Name, Email, Password };
       dispatch(register(userData));
     }
-    // setsignupName("");
-    // setsignupEmail("");
-    // setsignupPassword("");
-    // try {
-    //   const config = {
-    //     headers: {
-    //       "Content-type": "application/json",
-    //     },
-    //   };
-    //   const { data } = await axios.post(
-    //     "/sign-up",
-    //     {
-    //       Name,
-    //       Email,
-    //       Password,
-    //     },
-    //     config
-    //   );
-    //   console.log(data);
-    // } catch (error) {
-    //   console.log(error);
-    // }
   };
   if (isLoading) {
     return <Spinner />;

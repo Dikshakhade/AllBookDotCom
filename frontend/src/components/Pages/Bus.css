@@ -8,11 +8,7 @@
   align-items: center;
   flex-direction: column;
   background: grey;
-<<<<<<< HEAD
   font-family: "Electrolize", sans-serif;
-=======
-  font-family: FrontPageFont;
->>>>>>> 0b8f9f029cc671c26b2cff32f2a29ddf727cb117
 }
 .bus-element {
   margin: 5.5%;
