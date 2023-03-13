@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./Bus.css";
 import ViewNoLog from "../headers/ViewNoLog";
 import axios from "axios";
+
 function Bus() {
   const [BusData, setBusData] = useState([]);
   useEffect(() => {
