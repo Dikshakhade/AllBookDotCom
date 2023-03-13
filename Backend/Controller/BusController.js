@@ -1,59 +1,49 @@
+// const express = require("express");
 const AsyncHandler = require("express-async-handler");
 const Bus = require("../models/busModel");
-const connect = require("../config/Database");
-const BusData = [
-  {
-    busId: 1,
-    name: "bus1",
-    from: "Pune",
-    to: "Mumbai",
-    departureTime: "2.00pm",
-    totalTime: "4 hours",
-    price: "1000/-",
-  },
-  {
-    busId: 2,
-    name: "bus2",
-    from: "Pune",
-    to: "Banglore",
-    departureTime: "2.00pm",
-    totalTime: "4 hours",
-    price: "1000/-",
-  },
-  {
-    busId: 3,
-    name: "bus3",
-    from: "Pune",
-    to: "Ratnagiri",
-    departureTime: "2.00pm",
-    totalTime: "4 hours",
-    price: "1000/-",
-  },
-  {
-    busId: 4,
-    name: "bus3",
-    from: "Pune",
-    to: "Ratnagiri",
-    departureTime: "2.00pm",
-    totalTime: "4 hours",
-    price: "1000/-",
-  },
-  {
-    busId: 5,
-    name: "bus3",
-    from: "Pune",
-    to: "Ratnagiri",
-    departureTime: "2.00pm",
-    totalTime: "4 hours",
-    price: "1000/-",
-  },
-];
-// const options = { ordered: true };
 
-// const result = AsyncHandler(async (req, res) => {
-//   const data = await Bus.insert(BusData, options);
-//   res.send(data);
-//   // console.log(`${result.insertedCount} documents were inserted`);
-// });
+//get request
+const getBusdata = AsyncHandler(async (req, res) => {
+  Bus.find()
+    .then((result) => {
+      res.status(200).json({
+        result,
+      });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+const BusDataAdd = AsyncHandler(async (req, res) => {
+  const { name, from, to, departureTime, totalTime, totalPrice } =
+    await req.body;
 
-// module.export = { result };
+  const busExist = await Bus.findOne({ name });
+  if (busExist) {
+    res.status(400);
+    throw new Error("Bus Already Exist");
+  }
+  const bus = await Bus.create({
+    name,
+    from,
+    to,
+    departureTime,
+    totalTime,
+    totalPrice,
+  });
+  if (bus) {
+    res.status(201).json({
+      _id: bus._id,
+      name: bus.name,
+      from: bus.from,
+      to: bus.to,
+      departureTime: bus.departureTime,
+      totalTime: bus.totalTime,
+      totalPrice: bus.totalPrice,
+    });
+  } else {
+    res.status(500);
+    throw new Error("Error Occured");
+  }
+});
+module.exports = { BusDataAdd, getBusdata };

@@ -14,15 +14,9 @@
 }
 .movie {
   background-repeat: no-repeat;
-<<<<<<< HEAD
   background-size: 50%;
   background-size: cover;
   background-position: center;
-=======
-  background-size: 90%;
-  /* background-size: cover; */
-  background-position: top;
->>>>>>> 0b8f9f029cc671c26b2cff32f2a29ddf727cb117
   border-radius: 10px;
   background-color: rgb(255, 254, 254);
   display: grid;

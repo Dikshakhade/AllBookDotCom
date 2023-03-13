@@ -5,9 +5,15 @@ import axios from "axios";
 function Bus() {
   const [BusData, setBusData] = useState([]);
   useEffect(() => {
-    axios.get("/bus").then((res) => {
-      setBusData(res.data);
-    });
+    axios
+      .get("/bus")
+      .then((res) => {
+        console.log(res);
+        setBusData(res.data.result);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   }, []);
 
   return (
@@ -15,7 +21,7 @@ function Bus() {
       <ViewNoLog />
       {BusData.map((bus) => {
         return (
-          <div className="bus-div" key={bus.busId}>
+          <div className="bus-div" key={bus._id}>
             <div className="bus-element">
               <div className="bus-name" id="bus-description">
                 <div className="bus-p" id="bus-title">

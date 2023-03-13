@@ -22,7 +22,7 @@ const busSchema = mongoose.Schema(
       type: String,
       required: true,
     },
-    price: {
+    totalPrice: {
       type: Number,
       required: true,
     },

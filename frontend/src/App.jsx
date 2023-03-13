@@ -9,6 +9,7 @@ import Bus from "./components/Pages/Bus";
 import Signup from "./components/Sign-up/Signup";
 import Train from "./components/Pages/Train";
 import Movies from "./components/Pages/Movies";
+import { BackendFormData } from "./components/BackEndData/BackendFormData";
 const App = () => {
   return (
     <>
@@ -21,6 +22,7 @@ const App = () => {
           <Route path="/Bus" element={<Bus />}></Route>
           <Route path="/Train" element={<Train />}></Route>
           <Route path="/Movies" element={<Movies />}></Route>
+          <Route path="/offers" element={<BackendFormData />}></Route>
         </Routes>
       </BrowserRouter>
       <ToastContainer />
