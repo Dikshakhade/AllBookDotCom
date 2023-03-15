@@ -4,11 +4,17 @@ import ViewNoLog from "../headers/ViewNoLog";
 import axios from "axios";
 const Train = () => {
   const [TrainData, setTrainData] = useState([]);
+
   useEffect(() => {
-    axios.get("/train").then((res) => {
-      setTrainData(res.data);
-      console.log(res.data);
-    });
+    axios
+      .get("/train")
+      .then((res) => {
+        console.log(res);
+        setTrainData(res.data.result);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   }, []);
 
   return (
@@ -36,8 +42,8 @@ const Train = () => {
                 </div>
               </div>
               <div className="Train-name" id="price-seat-train">
-                <div className="price-train">Price: {Train.price}</div>
-                <div className="book-seat-train">Book Seat </div>
+                <div className="price-train">Price: {Train.totalPrice}</div>
+                <div className="book-seat-train">Book Seat</div>
               </div>
             </div>
           </div>

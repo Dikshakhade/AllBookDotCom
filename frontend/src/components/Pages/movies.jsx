@@ -10,13 +10,14 @@ const Movies = () => {
     axios
       .get("/movie")
       .then((res) => {
-        setMovieData(res.data);
-        console.log(res.data);
+        console.log(res);
+        setMovieData(res.data.result);
       })
       .catch((err) => {
         console.log(err);
       });
   }, []);
+
   return (
     <>
       <ViewNoLog />

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./BackEndFormData.css";
+import axios from "axios";
 export const TrainFormData = () => {
-  const [trainID, setTrainID] = useState("");
   const [name, setTrainName] = useState("");
   const [from, setFrom] = useState("");
   const [to, setTo] = useState("");
@@ -9,19 +9,34 @@ export const TrainFormData = () => {
   const [totalTime, setTotalTime] = useState("");
   const [totalPrice, setPrice] = useState("");
 
+  const trainHandler = async () => {
+    try {
+      const config = {
+        headers: {
+          "Content-type": "application/json",
+        },
+      };
+      const { data } = await axios.post(
+        "/train",
+        {
+          name,
+          from,
+          to,
+          departureTime,
+          totalTime,
+          totalPrice,
+        },
+        config
+      );
+      console.log(data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <>
-      <form className="train-form">
+      <form className="train-form" onSubmit={trainHandler}>
         Add New Train
-        <input
-          type="text"
-          placeholder="Train ID"
-          name="trainID"
-          value={trainID}
-          onChange={(e) => {
-            setTrainID(e.target.value);
-          }}
-        />
         <input
           type="text"
           placeholder="name"
