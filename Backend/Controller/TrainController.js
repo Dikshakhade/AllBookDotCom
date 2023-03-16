@@ -17,6 +17,10 @@ const getTrainData = AsyncHandler(async (req, res) => {
 const TrainDataAdd = AsyncHandler(async (req, res) => {
   const { name, from, to, departureTime, totalTime, totalPrice } =
     await req.body;
+  if (!name || !from || !to || !departureTime || !totalTime || !totalPrice) {
+    res.status(400);
+    throw new Error("Please fill all the feilds");
+  }
 
   const TrainExist = await Train.findOne({ name });
   if (TrainExist) {

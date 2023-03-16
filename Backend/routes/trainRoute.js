@@ -4,12 +4,12 @@ const { TrainDataAdd, getTrainData } = require("../Controller/TrainController");
 // const TrainData = [
 //   {
 //     trainId: 1,
-//     name: "train1",
-//     from: "Pune",
-//     to: "Mumbai",
-//     departureTime: "2.00pm",
-//     totalTime: "4 hours",
-//     price: "1000/-",
+// name: "train1",
+// from: "Pune",
+// to: "Mumbai",
+// departureTime: "2.00pm",
+// totalTime: "4 hours",
+// price: "1000/-",
 //   },
 //   {
 //     trainId: 2,

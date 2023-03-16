@@ -34,7 +34,7 @@ export const BusFormData = () => {
     }
   };
   return (
-    <>
+    <div>
       <form className="bus-form" onSubmit={busHandler}>
         Add New Bus
         <input
@@ -93,6 +93,6 @@ export const BusFormData = () => {
         />
         <input type="submit" value="Add Bus" />
       </form>
-    </>
+    </div>
   );
 };

@@ -17,6 +17,10 @@ const getMoviedata = AsyncHandler(async (req, res) => {
 
 const MovieDataAdd = AsyncHandler(async (req, res) => {
   const { Title, Year, Rating, Poster, totalPrice } = await req.body;
+  if (!Title || !Year || !Rating || !Poster || !totalPrice) {
+    res.status(400);
+    throw new Error("Please fill all the feilds");
+  }
 
   const MovieExist = await Movie.findOne({ Title });
   if (MovieExist) {
