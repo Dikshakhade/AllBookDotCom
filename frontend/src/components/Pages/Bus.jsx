@@ -2,8 +2,9 @@ import React, { useEffect, useState } from "react";
 import "./Bus.css";
 import ViewNoLog from "../headers/ViewNoLog";
 import axios from "axios";
-
+import { useNavigate } from "react-router-dom";
 function Bus() {
+  const navigate = useNavigate();
   const [BusData, setBusData] = useState([]);
   useEffect(() => {
     axios
@@ -16,7 +17,9 @@ function Bus() {
         console.log(err);
       });
   }, []);
-
+  const bookseatHandler = () => {
+    navigate("/bookbus");
+  };
   return (
     <>
       <ViewNoLog />
@@ -41,7 +44,9 @@ function Bus() {
               </div>
               <div className="bus-name" id="price-seat">
                 <div className="price">Price: {bus.price}</div>
-                <div className="book-seat">Book Seat </div>
+                <div className="book-seat" onClick={bookseatHandler}>
+                  Book Seat
+                </div>
               </div>
             </div>
           </div>

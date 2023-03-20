@@ -16,7 +16,7 @@ export const BusFormData = () => {
           "Content-type": "application/json",
         },
       };
-      const { data } = await axios.post(
+      await axios.post(
         "/bus",
         {
           name,
@@ -28,7 +28,36 @@ export const BusFormData = () => {
         },
         config
       );
-      console.log(data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const updateHandler = async () => {
+    try {
+      const config = {
+        headers: {
+          "Content-type": "application/json",
+        },
+      };
+      await axios.put(
+        "/bus",
+        { name, from, to, departureTime, totalTime, totalPrice },
+        config
+      );
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const deleteHandler = async () => {
+    try {
+      const config = {
+        headers: {
+          "Content-type": "application/json",
+        },
+      };
+      axios.delete("/bus", { data: { name } }, config);
     } catch (error) {
       console.log(error);
     }
@@ -92,6 +121,9 @@ export const BusFormData = () => {
           }}
         />
         <input type="submit" value="Add Bus" />
+        <input type="button" value="Update" onClick={updateHandler} />
+        <input type="button" value="Delete" onClick={deleteHandler} />
+        {/* <button onClick={updateHandler}>Update</button> */}
       </form>
     </div>
   );
