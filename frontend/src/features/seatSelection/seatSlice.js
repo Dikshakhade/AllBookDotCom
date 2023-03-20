@@ -1,17 +1,18 @@
-import createSlice from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   isChecked: false,
 };
 
-export const seatSelection = createSlice({
+const seatSelection = createSlice({
   name: "seatSelection",
   initialState,
   reducers: {
+    // resetSeat:
     seatSelectionReducer: (state) => {
-      state.isChecked = !isChecked;
+      state.isChecked = !state.isChecked;
     },
   },
 });
 
 export default seatSelection.reducer;
-export const { toggleSeatSelect } = seatSelection.actions;
+export const { seatSelectionReducer } = seatSelection.actions;

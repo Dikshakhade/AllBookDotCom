@@ -1,12 +1,12 @@
-import React, { useRef } from "react";
+import React from "react";
 import ViewNoLog from "../../headers/ViewNoLog";
 import "./BusBook.css";
+import { seatSelectionReducer } from "../../../features/seatSelection/seatSlice";
 import { useDispatch, useSelector } from "react-redux";
 const BusBook = () => {
   const dispatch = useDispatch();
-  useSelector((state) => {
-    const stateOfChecked = state.seatSelection.isChecked;
-  });
+  const stateOfChecked = useSelector((state) => state.seatSelection.isChecked);
+  // console.log(dispatch, stateOfChecked);
   const busSeatData = [
     {
       name: "1",
@@ -54,8 +54,10 @@ const BusBook = () => {
       name: "15",
     },
   ];
-  const selectionBox = useRef(null);
-  const toggle = () => {};
+  const toggle = (prop) => {
+    // console.log(stateOfChecked);
+    dispatch(seatSelectionReducer(stateOfChecked));
+  };
   return (
     <>
       <ViewNoLog />
@@ -65,8 +67,9 @@ const BusBook = () => {
             return (
               <div
                 className="bus-seats-divs"
+                key={bus.name}
                 id={`seat-no-${bus.name}`}
-                onClick={dispatch(toggle)}
+                onClick={toggle}
               ></div>
             );
           })}
