@@ -2,65 +2,81 @@ import React from "react";
 import ViewNoLog from "../../headers/ViewNoLog";
 import "./BusBook.css";
 import { seatSelectionReducer } from "../../../features/seatSelection/seatSlice";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+
 const BusBook = () => {
+  const { busSeatData1 } = useSelector((state) => state.seatSelection);
+  const seat = useSelector((state) => state.seatSelection.seat);
   const dispatch = useDispatch();
-  const stateOfChecked = useSelector((state) => state.seatSelection.isChecked);
-  // console.log(dispatch, stateOfChecked);
+  console.log(busSeatData1[9]);
+  console.log(seat);
   const busSeatData = [
     {
-      name: "1",
+      name: 1,
+      initialSeatStatus: false,
     },
     {
-      name: "2",
+      name: 2,
+      initialSeatStatus: false,
     },
     {
-      name: "3",
+      name: 3,
+      initialSeatStatus: false,
     },
     {
-      name: "4",
+      name: 4,
+      initialSeatStatus: false,
     },
     {
-      name: "5",
+      name: 5,
+      initialSeatStatus: false,
     },
     {
-      name: "6",
+      name: 6,
+      initialSeatStatus: false,
     },
     {
-      name: "7",
+      name: 7,
+      initialSeatStatus: false,
     },
     {
-      name: "8",
+      name: 8,
+      initialSeatStatus: false,
     },
     {
-      name: "9",
+      name: 9,
+      initialSeatStatus: false,
     },
     {
-      name: "10",
+      name: 10,
+      initialSeatStatus: false,
     },
     {
-      name: "11",
+      name: 11,
+      initialSeatStatus: false,
     },
     {
-      name: "12",
+      name: 12,
+      initialSeatStatus: false,
     },
     {
-      name: "13",
+      name: 13,
+      initialSeatStatus: false,
     },
     {
-      name: "14",
+      name: 14,
+      initialSeatStatus: false,
     },
     {
-      name: "15",
+      name: 15,
+      initialSeatStatus: false,
     },
   ];
-  const toggle = (prop) => {
-    // console.log(stateOfChecked);
-    dispatch(seatSelectionReducer(stateOfChecked));
-  };
+
   return (
     <>
       <ViewNoLog />
+      {/* <BusBook2 /> */}
       <div className="whole-bus-div">
         <div className="bus-seat">
           {busSeatData.map((bus) => {
@@ -69,12 +85,23 @@ const BusBook = () => {
                 className="bus-seats-divs"
                 key={bus.name}
                 id={`seat-no-${bus.name}`}
-                onClick={toggle}
+                style={{
+                  border: busSeatData1[bus.name]
+                    ? "2px solid green"
+                    : "1px solid black",
+                }}
+                onClick={() => {
+                  dispatch(seatSelectionReducer(bus.name));
+                  // dispatch(cartCounter(bus.name));
+                }}
               ></div>
             );
           })}
         </div>
-        <div className="bus-cart"></div>
+        <div className="bus-cart">
+          number is {seat}
+          data is {busSeatData1[0].name}
+        </div>
       </div>
     </>
   );
